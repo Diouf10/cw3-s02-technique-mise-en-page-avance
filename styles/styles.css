@@ -5,11 +5,27 @@
 
 /* LES VARIABLES CSS ICI */
 
+:root{
+    --couleur-blanc-- : #fff;
+    --couleur-noir--: #000;
+
+    --couleur-principal--: #a7029a;
+    --couleur-secondaire--: darkgrey;
+
+    --degrade-principal--: linear-gradient(36deg, rgba(167,2,154,8.7) 0%, rgba(167,2,154,0)100%);
+}
+
 /*---------------------- Generic ----------------------*/
 
 /* Mettre la ligne universelle pour le box-sizing */
 
+*, *::before *::after{
+    box-sizing: border-box;
+}
 
+li{
+    list-style: none;
+}
 
 /*---------------------- Elements ----------------------*/
 
@@ -17,10 +33,241 @@
 
 
 
+body{
+    font-family: 'Cardo', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0;
+
+}
+
+
+h1{
+    position: absolute;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    color: #FFFFFF;
+    font-family: 'Bungee Shade', cursive;
+    padding-left: 152px;
+}
+
+
+
+h2{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    color: #FFFFFF;
+    font-family: 'Bungee Shade', cursive;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: var(--couleur-blanc--);
+}
+
+
+
+
+
+
+
+/*hero*/
+
+.hero{
+    height: 80vh;
+    background:  var(--couleur-noir--);
+    position: relative;
+
+
+}
+
+
+
+
+.hero video{
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    object-fit: cover;
+
+}
+
+
+
+
+.hero p, hero a {
+    font-size: 24px;
+}
+
+
+
+
+
+.hero .content{
+
+    width: 100%;
+    height: 100%;
+
+    color: var(--couleur-blanc--);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--degrade-principal--);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+.hero::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+
+
+
+
 /*---------------------- Components ----------------------*/
 
+/*header*/
+
+.header-principal  {
+    background:  var(--couleur-noir--);;
+    width: 1439px;
+    height: 73px;
+    position: fixed;
+}
 
 
+
+
+
+
+
+
+
+
+/*cartes*/
+
+
+.interet .conteneur{
+    background-image: url(../images/bg-interet.jpg);
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.interet .conteneur h3{
+    font-size: 40px;
+    line-height: 54px;
+}
+
+
+
+
+.cartes{
+    display: flex;
+    margin: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+
+.carte{
+    margin: 20px;
+    background: var(--couleur-blanc--);
+    max-width: 352px;
+    max-height:367px;
+
+
+}
+
+
+
+
+
+
+/*citation*/
+
+
+.citation .conteneur {
+    background-image: url(../images/bg-citation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    color: var(--couleur-blanc--);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+
+.citation .conteneur h3{
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 54px;
+
+}
+
+
+
+
+
+
+
+/*footer*/
+
+
+.footer-principal{
+    background: var(--couleur-noir--);
+    color: var(--couleur-blanc--);
+    height: 144px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer-principal p{
+    margin: 0;
+}
 
 
 
